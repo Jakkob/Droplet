@@ -1,0 +1,20 @@
+
+body {
+	background-color: #fef4df;
+}
+.navbar {
+	background-color: #8dc63f;
+	border-color: #83A94F;
+	text-decoration: none;
+}
+.navbar-toggle {
+	border-color: #83A94F;
+}
+#droplet-icon {
+	width: auto;
+  height: 40px;
+  z-index: 1000;
+  position: fixed;
+  top: 5px;
+  left: 10px;
+}
