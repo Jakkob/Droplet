@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '0.18.2'
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -14,9 +14,11 @@ gem 'pg'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '0.9.3'
 
-gem 'devise'
+gem 'devise', '3.4.1'
+
+gem 'puma', '2.13.4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -28,6 +30,15 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+	# RSpec Testing Tools
+	gem 'rspec-rails', '3.3.3'
+
+	# Data Factory Generator Tool
+  gem 'factory_girl_rails', '4.5.0'
+
+  # Validations Matchers for RSpec
+  gem 'shoulda-matchers', '2.8.0'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -38,3 +49,11 @@ group :development, :test do
   gem 'spring'
 end
 
+group :test do
+	# Fake Test-data Generator
+	gem 'faker' , '1.5.0'
+  
+  # gem 'capybara' 
+  
+  # gem 'guard-rspec'
+end
