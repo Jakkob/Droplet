@@ -11,7 +11,7 @@ class Api::V1::SugarsController < ApplicationController
 		respond_to do |format|
 			format.json do
 				@sugar = Sugar.create(sugar_params)
-				render json: 'Reading created!', status: 201
+				render json: @sugar, status: 201
 			end
 		end
 	end

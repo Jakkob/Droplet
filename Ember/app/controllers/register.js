@@ -16,14 +16,17 @@ actions: {
 			console.log(this.get('passwordConfirmation'));
 
 			function onSuccess() {
-				self.transitionToRoute('home');
+				self.transitionToRoute('login');
 			}
 
 			function onFail() {
 				console.error("Something went wrong. Account not created!");
 			}
 
-			newUser.save().then(onSuccess, onFail);
+			// postData(newUser).then(onSuccess, onFail);
+			newUser.save().then(onSuccess, function(reason) {
+				 console.log(reason);
+			});
 		}
 	}
 });

@@ -16,7 +16,6 @@ module.exports = function(defaults) {
     destDir: 'assets'
   });
   app.import('bower_components/jquery-knob/js/jquery.knob.js');
-  app.import('bower_components/chartist/dist/chartist.min.js');
   // app.import('vendor/jQuery-Knob-master/dist/jquery.knob.min.js', {
   //   type: 'vendor'
   // });

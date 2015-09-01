@@ -17,14 +17,9 @@ export default Ember.Component.extend({
 			},
 			format: function(val) {
 				return val + "mg/dL";
-			},
-			draw: function() {
-				this.i = 80;
 			}
 		});
-	}.on('didInsertElement'),
-	_valueChanged: function() {
-		$().val(this.get('value')).on('didLoad');
-	}
+		$(".dial").val(this.get('value'));
+	}.on('didInsertElement')
 });
 

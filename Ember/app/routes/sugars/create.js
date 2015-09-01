@@ -10,13 +10,17 @@ export default Ember.Route.extend({
 
 			var self = this;
 
+			function onSuccess() {
+				self.transitionTo('sugars.index');
+			}
+
+			function onFail() {
+				console.error('Something appears to have gone wrong, data not submitted!');	
+			}
+
 			
-			if(test.reading !== null) {
-				test.save().then(function() {
-					self.transitionToRoute('home');	
-				}, function() {
-					console.error('Something appears to have gone wrong, data not submitted!');	
-				});
+			if(test.reading != null) {
+				test.save().then(onSuccess, onFail);
 			}
 		}
 	}

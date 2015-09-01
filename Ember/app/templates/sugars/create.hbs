@@ -2,7 +2,7 @@
 	<form {{ action 'createSugar' newReading on="submit" }}>
 		<h4 class="text-center">Select a Glucose level:</h4>
 		<div class="center-block" style="width:80%;">
-			{{sugar-dial value=newReading}}
+			{{sugar-dial newReading=newReading value=newReading}}
 
 			{{newReading}}
 		</div>
